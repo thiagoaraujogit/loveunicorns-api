@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.DOUBLE,
         allowNull: false
       }
-    }, { freezeTableName: true })
+    })
   },
 
   down: async (queryInterface, Sequelize) => {

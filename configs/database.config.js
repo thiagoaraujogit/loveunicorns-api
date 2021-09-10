@@ -8,6 +8,7 @@ module.exports = {
   database: process.env.POSTGRES_DATABASE,
   define: {
     timestamps: true,
-    underscored: true
+    underscored: true,
+    freezeTableName: true
   }
 }
