@@ -29,7 +29,7 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false
       }
-    })
+    }, { freezeTableName: true })
   },
 
   down: async (queryInterface, Sequelize) => {
