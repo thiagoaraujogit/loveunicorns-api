@@ -1,11 +1,13 @@
 const User = require('../models/user.model')
+const crypto = require('../utils/crypto')
 
 exports.store = async (req, res) => {
   const { name, email, password } = req.body
 
   try {
-    const user = await User.create({ name, email, password })
-    return res.json(user)
+    const encryptedPassoword = await crypto.hash(password)
+    await User.create({ name: name, email: email, password: encryptedPassoword })
+    return res.json({ message: 'User successfully created!'})
   } catch (error) {
     console.error(error)
   }

@@ -12,6 +12,7 @@
     "lint": "eslint --fix . --ignore-path .gitignore"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
